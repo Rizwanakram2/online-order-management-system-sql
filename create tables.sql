@@ -55,3 +55,5 @@ CREATE TABLE Payments (
     paymentStatus NVARCHAR(50) DEFAULT 'Unpaid',
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
+
+select * from Payments;
