@@ -16,3 +16,5 @@ BEGIN
     INNER JOIN deleted d ON i.OrderID = d.OrderID
     WHERE i.OrderStatus <> d.OrderStatus;
 END;
+
+select * from OrderAudit;
