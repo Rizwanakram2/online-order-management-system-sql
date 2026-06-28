@@ -20,5 +20,6 @@ Update products
 Set stock_Quantity = 5
 Where ProductID = 1;
 
+drop TRIGGER trg_low_stock_alert;
 Select * from StockAlert;
 select * from Products;
