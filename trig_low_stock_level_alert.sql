@@ -1,4 +1,5 @@
 use OnlineOrderDB;
+Go
 
 Create or Alter trigger trg_low_stock_alert
 on products
@@ -10,7 +11,8 @@ BEGIN
         ProductID,
         ProductName,
         stock_Quantity,
-        'Stock is low for product ' + ProductName + '. Current stock is ' + CAST(stock_Quantity AS varchar(10)) + '. Please restock.'
+        'Stock is low for product ' + ProductName + '. Current stock is ' 
+        + CAST(stock_Quantity AS varchar(10)) + '. Please restock.'
     FROM inserted
     WHERE Stock_Quantity < 10;
 END;
@@ -22,3 +24,4 @@ Where ProductID = 1;
 
 Select * from StockAlert;
 select * from Products;
+drop trigger trg_low_stock_alert;
